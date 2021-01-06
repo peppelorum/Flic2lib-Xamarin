@@ -29,9 +29,22 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="NuGet.Build.Packaging">
-      <Version>0.2.5-dev.8</Version>
+      <Version>0.2.2</Version>
       <PrivateAssets>All</PrivateAssets>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Flic2libXcframework\Flic2libXcframework.csproj">
+      <Project>{7EBC4C0B-B7F8-4FE4-8DFB-10E9016111BF}</Project>
+      <Name>Flic2libXcframework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Flic2libAndroid\Flic2libAndroid.csproj">
+      <Project>{0E7DEEAF-0881-4EEB-989A-DF2E63DE9626}</Project>
+      <Name>Flic2libAndroid</Name>
+      <SkipGetTargetFrameworkProperties></SkipGetTargetFrameworkProperties>
+      <ReferenceOutputAssembly></ReferenceOutputAssembly>
+      <AdditionalProperties></AdditionalProperties>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.Common.targets" />
   <Import Project="$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.targets" Condition="Exists('$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.targets')" />
